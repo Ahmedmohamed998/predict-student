@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 import re
 
-model=joblib.load(open(r'E:\survey pro\best_model_catboost.pkl','rb'))
+model=joblib.load(open('best_model_catboost.pkl','rb'))
 features=[
     'What is your gender?',
     'What is your age?',
@@ -71,7 +71,7 @@ def sanitize_filename(name):
 
 def load_encoder(feature):
     safe_name = sanitize_filename(feature)
-    return joblib.load(open(f'E:\\survey pro\\{safe_name}_encoder.pkl', 'rb'))
+    return joblib.load(open(f'{safe_name}_encoder.pkl', 'rb'))
 
 
 def main():
